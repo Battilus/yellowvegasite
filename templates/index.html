@@ -4,11 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Yellow Vega Custom Shop</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Oswald|Pangolin|Press+Start+2P|Russo+One" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-grid.min.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-  <script src="{% static 'js/bootstrap.min.js' %}"></script>
   <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
   <script src="{% static 'js/script.js' %}"></script>
 </head>
 <body>
@@ -22,15 +24,26 @@
     </div>
 
     <nav class="row justify-content-center">
-      <div class="col-8">
-        <div class="nav-wrapper-el">
-          <a href="/">Главная</a>
-          <a href="/constructor/">Конструктор</a>
-          <a href="/about/">Обо мне</a>
-          <a href="/delivery/">Доставка</a>
-          <a href="/payment/">Способы оплаты</a>
+
+      <div class="col-8 nav-wrapper-el">
+        <ul class="topmenu">
+          <li><a href="/">Главная</a></li>
+          <li><a id="nav-item-catalog" href="#">Каталог
+            <i id="chevron-off" class="fa fa-chevron-down fa-fw" aria-hidden="true"></i>
+            <i id="chevron-on" class="fa fa-chevron-up fa-fw" aria-hidden="true"></i>
+          </a></li>
+          <li><a href="/about/">Обо мне</a></li>
+          <li><a href="/delivery/">Доставка</a></li>
+          <li><a href="/payment/">Способы оплаты</a></li>
+        </ul>
+      </div>
+      <div class="col-12">
+        <div class="row justify-content-center">
+          <div class="col-2"></div>
         </div>
       </div>
+
+
     </nav>
 
   </div>
@@ -38,7 +51,7 @@
 
 <main>
   {% block main %}{% endblock %}
-  {% block constructor %}{% endblock %}
+  {% block catalog %}{% endblock %}
   {% block delivery %}{% endblock %}
   {% block payment %}{% endblock %}
   {% block about %}{% endblock %}

@@ -34,12 +34,24 @@ nav {
     align-items: center;
 }
 
+nav .topmenu {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+nav .topmenu li {
+    list-style-type: none;
+}
+
 nav a {
     display: inline-block;
     color: azure;
     text-decoration: none;
-    padding: 1em;
-
+    padding: 1em 1em 1em 1em;
+    font-size: 1.2em;
+    outline: none;
 }
 
 nav a:hover {
@@ -51,5 +63,8 @@ nav a:hover {
     transition: all 0.5s ease;
 }
 
+.disable {
+    display: none;
+}
 
 

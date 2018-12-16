@@ -6,7 +6,7 @@ def main_page(request):
 
 
 def constructor(request):
-    return render_to_response('_constructor.html')
+    return render_to_response('_catalog.html')
 
 
 def about(request):
