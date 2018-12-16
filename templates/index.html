@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Yellow Vega Custom Shop</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald|Pangolin|Press+Start+2P|Russo+One" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-grid.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+<header>
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col logo-wrapper">
+        <img class="logo-img" src="" alt="">
+      </div>
+    </div>
+
+    <nav class="row justify-content-center">
+      <div class="col-8">
+        <div class="nav-wrapper-el">
+          <a href="/">Главная</a>
+          <a href="/constructor/">Конструктор</a>
+          <a href="/about/">Обо мне</a>
+          <a href="/delivery/">Доставка</a>
+          <a href="/payment/">Способы оплаты</a>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+  {% block main %}{% endblock %}
+  {% block constructor %}{% endblock %}
+  {% block delivery %}{% endblock %}
+  {% block payment %}{% endblock %}
+  {% block about %}{% endblock %}
+</main>
+
+</body>
+</html>
