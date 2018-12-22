@@ -24,11 +24,13 @@ body {
 
 /*НАВИГАЦИЯ*/
 nav {
+    height: 63px;
     background-color: var(--second-bg-color);
     font-family: 'Russo One', sans-serif;
 }
 
 .nav-wrapper-el {
+    height: 63px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,12 +48,22 @@ nav .topmenu li {
 }
 
 nav a {
+    white-space: nowrap;
     display: inline-block;
     color: azure;
     text-decoration: none;
     padding: 1em 1em 1em 1em;
     font-size: 1.2em;
     outline: none;
+}
+
+.active-nav-item {
+    color: yellow;
+    background-color: var(--main-bg-color);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 nav a:hover {
@@ -61,6 +73,26 @@ nav a:hover {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+
+.submenu {
+    background-color: var(--second-bg-color);
+}
+
+.submenu li {
+    list-style-type: none;
+}
+
+.submenu a {
+    padding: 0;
+}
+
+.submenu-title {
+    margin-bottom: 0.5em;
+}
+
+.submenu-item {
+    font-size: 0.8em;
 }
 
 .disable {

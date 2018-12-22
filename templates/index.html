@@ -4,14 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Yellow Vega Custom Shop</title>
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
         integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Oswald|Pangolin|Press+Start+2P|Russo+One" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-grid.min.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
   <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
   <script src="{% static 'js/bootstrap.min.js' %}"></script>
   <script src="{% static 'js/script.js' %}"></script>
+
 </head>
 <body>
 <header>
@@ -25,7 +28,7 @@
 
     <nav class="row justify-content-center">
 
-      <div class="col-8 nav-wrapper-el">
+      <div class="col-12 nav-wrapper-el">
         <ul class="topmenu">
           <li><a href="/">Главная</a></li>
           <li><a id="nav-item-catalog" href="#">Каталог
@@ -37,15 +40,19 @@
           <li><a href="/payment/">Способы оплаты</a></li>
         </ul>
       </div>
-      <div class="col-12">
+
+      <div class="col-12 submenu">
         <div class="row justify-content-center">
-          <div class="col-2"></div>
+          <div class="col-3">
+            <ul>
+              <li class="submenu-title"><a href="#">Гитарное оборудование</a></li>
+              <li class="submenu-item"><a href="#">Комбики</a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
-
     </nav>
-
   </div>
 </header>
 
