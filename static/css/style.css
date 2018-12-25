@@ -1,6 +1,10 @@
+/*https://colorscheme.ru/#1q62Pu4tdw0w0*/
+
 :root {
     --main-bg-color: #191919;
     --second-bg-color: #282828;
+    --white-color: white;
+    --yellow-color: #e9c30e;
 }
 
 body {
@@ -24,13 +28,11 @@ body {
 
 /*НАВИГАЦИЯ*/
 nav {
-    height: 63px;
     background-color: var(--second-bg-color);
     font-family: 'Russo One', sans-serif;
 }
 
 .nav-wrapper-el {
-    height: 63px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +43,7 @@ nav .topmenu {
     justify-content: center;
     align-items: center;
     margin: 0;
+    padding: 0;
 }
 
 nav .topmenu li {
@@ -58,7 +61,7 @@ nav a {
 }
 
 .active-nav-item {
-    color: yellow;
+    color: var(--yellow-color);
     background-color: var(--main-bg-color);
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -67,12 +70,17 @@ nav a {
 }
 
 nav a:hover {
-    color: yellow;
+    color: var(--yellow-color);
     background-color: var(--main-bg-color);
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+
+.topmenu-active-item {
+    color: var(--yellow-color);
+    background-color: var(--main-bg-color);
 }
 
 .submenu {
@@ -83,16 +91,54 @@ nav a:hover {
     list-style-type: none;
 }
 
+.submenu ul {
+    padding-left: 30%;
+}
+
 .submenu a {
     padding: 0;
 }
 
-.submenu-title {
+.submenu-title a {
     margin-bottom: 0.5em;
+    color: var(--yellow-color);
+}
+.submenu-title a:hover{
+    background-color: var(--second-bg-color);
+
 }
 
 .submenu-item {
     font-size: 0.8em;
+    margin-bottom: 0.5em;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+.submenu-item a:hover{
+    background-color: var(--second-bg-color);
+}
+
+.submenu-item a:after{
+    background-color: var(--yellow-color);
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0;
+    left: 50%;
+    position: relative;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.submenu-item a:hover:after,
+.submenu-item a:focus:after{
+    width: 100%;
 }
 
 .disable {
