@@ -9,11 +9,13 @@ $(document).ready(function () {
             submenu.removeClass('disable');
             chevron_on.removeClass('disable');
             chevron_off.addClass('disable');
+            $('.topmenu a:contains("Каталог")').removeClass("active-nav-item");
             nav_flag = true
         } else {
             submenu.addClass('disable');
             chevron_on.addClass('disable');
             chevron_off.removeClass('disable');
+            $('.topmenu a:contains("Каталог")').addClass("active-nav-item");
             nav_flag = false
         }
     });
