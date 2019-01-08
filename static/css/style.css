@@ -7,7 +7,7 @@
 :root {
     --main-bg-color: #191919;
     --second-bg-color: #282828;
-    --second-bg-color-a: rgba(40, 40, 40, 1);
+    --second-bg-color-a: rgba(0, 0, 0, 0.6);
     --white-color: #fdfdfe;
     --yellow-color: #e9c30e;
 }
@@ -15,6 +15,7 @@
 body {
     margin: 0;
     background-color: var(--main-bg-color);
+    background-image: url('/static/img/wallpaper.png');
     font-family: 'Roboto', sans-serif;
     color: var(--white-color);
 }
@@ -30,7 +31,7 @@ body {
 
 /*НАВИГАЦИЯ*/
 nav {
-    background-color: var(--second-bg-color);
+    background-color: var(--second-bg-color-a);
     font-family: 'Russo One', sans-serif;
 }
 
@@ -64,7 +65,6 @@ nav a {
 
 .active-nav-item {
     color: var(--yellow-color);
-    background-color: var(--main-bg-color);
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -73,7 +73,7 @@ nav a {
 
 nav a:hover {
     color: var(--yellow-color);
-    background-color: var(--main-bg-color);
+
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -86,7 +86,7 @@ nav a:hover {
 }
 
 .submenu {
-    background-color: var(--second-bg-color);
+    background-color: var(--second-bg-color-a);
 }
 
 .submenu li {
@@ -105,10 +105,7 @@ nav a:hover {
     margin-bottom: 0.5em;
     color: var(--yellow-color);
 }
-.submenu-title a:hover{
-    background-color: var(--second-bg-color);
 
-}
 
 .submenu-item {
     font-size: 0.8em;
@@ -118,9 +115,7 @@ nav a:hover {
     cursor: pointer;
     position: relative;
 }
-.submenu-item a:hover{
-    background-color: var(--second-bg-color);
-}
+
 
 .submenu-item a:after{
     background-color: var(--yellow-color);
