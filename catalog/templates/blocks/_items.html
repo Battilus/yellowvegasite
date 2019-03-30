@@ -1,0 +1,55 @@
+{% extends '_catalog.html' %}
+{% block items %}
+  <div class="container">
+
+    {% include '__breadcrumbs.html' %}
+    <div class="row ">
+
+      {% for item in items %}
+        <div class="col-lg-6 col-sm-12 wrap-block">
+          <div class="block block-items">
+            <a href="/catalog/combo-amps/{{ item.id }}/">
+              <img class="block-img" src="{{ item.img1.url }}" alt="">
+            </a>
+            <div class="title">
+              <p><a href="/catalog/combo-amps/{{ item.id }}/">
+                <h3>{{ item.title }}</h3>
+              </a></p>
+            </div>
+            <p class="items-size"><b>Размер:</b> {{ item.size }}</p>
+            <p class="items-size"><b>Тип:</b> {{ item.type }}</p>
+          </div>
+        </div>
+      {% endfor %}
+
+    </div>
+
+
+    <div class="row justify-content-center pagination">
+      {% if item.has_previous or item.has_next %}
+        {% if items.has_previous %}
+          <div class="col-lg-1 col-md-2 col-sm-2 col-2">
+            <a class="pag-item block" href="?page={{ items.previous_page_number }}">
+              <i class="fas fa-chevron-left"></i>
+            </a>
+          </div>
+        {% endif %}
+        {% for page in items.paginator.page_range %}
+          <div class="col-lg-1 col-md-2 col-sm-2 col-2">
+            <a class="pag-item block" href="?page={{ page }}">
+              {{ page }}
+            </a>
+          </div>
+        {% endfor %}
+
+        {% if items.has_next %}
+          <div class="col-lg-1 col-md-2 col-sm-2 col-2">
+            <a class="pag-item block" href="?page={{ items.next_page_number }}">
+              <i class="fas fa-chevron-right"></i>
+            </a>
+          </div>
+        {% endif %}
+        </div>
+        </div>
+      {% endif %}
+{% endblock %}

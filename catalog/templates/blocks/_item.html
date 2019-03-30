@@ -1,0 +1,60 @@
+{% extends '_catalog.html' %}
+{% block item %}
+  <div class="container">
+    {% include '__breadcrumbs.html' %}
+
+    <div class="row">
+      <div class="col-12">
+
+        <div class="block item-card">
+          <div class="row">
+
+            <div class="col-md-12 col-lg-6">
+              <div class="row">
+                <div class="col-12 ">
+                  <img id="slider-main-img-1" class="slider-main-img " src="{{ item.img1.url }}" alt="">
+                  <img id="slider-main-img-2" class="slider-main-img " src="{{ item.img2.url }}" alt="">
+                  <img id="slider-main-img-3" class="slider-main-img " src="{{ item.img3.url }}" alt="">
+                  <img id="slider-main-img-4" class="slider-main-img " src="{{ item.img4.url }}" alt="">
+                </div>
+              </div>
+              <div class="row slider-small-img-warp">
+                <div class="col-3">
+                  <img data-id="slider-main-img-1" class="slider-small-img active-small-img" src="{{ item.img1.url }}"
+                       alt="">
+                </div>
+                <div class="col-3">
+                  <img data-id="slider-main-img-2" class="slider-small-img" src="{{ item.img2.url }}" alt="">
+                </div>
+                <div class="col-3">
+                  <img data-id="slider-main-img-3" class="slider-small-img" src="{{ item.img3.url }}" alt="">
+                </div>
+                <div class="col-3">
+                  <img data-id="slider-main-img-4" class="slider-small-img" src="{{ item.img4.url }}" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12 col-lg-6">
+              <h3 class="item-title title">{{ item.title }}</h3>
+              <p>{{ item.size }}</p>
+              <p><b>Тип:</b> {{ item.type }}</p>
+              <p><b>Усиление:</b> {{ item.amps }}</p>
+              <p><b>Размер динамика:</b> {{ item.speaker_size }}</p>
+              <h3>Описание</h3>
+              <p>{{ item.description }}</p>
+            </div>
+
+            <div class="col-md-12 col-lg-6">
+              <h3>Видео</h3>
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/LJ4QQ2vh7AE" frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

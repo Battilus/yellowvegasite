@@ -1,0 +1,64 @@
+{% load static %}
+<nav id="desktop-nav" class="row justify-content-center">
+
+  <div class="col-12 logo">
+    <b class="logo-text">Yellow Vega Custom Shop</b>
+    <img class="menu-nav-button" src="{% static 'img/icon-menu.png' %}">
+  </div>
+
+  <div class="col-12 topmenu-wrapper">
+    <ul class="topmenu">
+      <li><a href="/">Главная</a></li>
+      <li id="desktop-catalog-btn"><span id="nav-item-catalog">Каталог
+            <i id="chevron-off" class="fa fa-chevron-down fa-fw" aria-hidden="true"></i>
+            <i id="chevron-on" class="fa fa-chevron-up fa-fw" aria-hidden="true"></i>
+          </span></li>
+      <li id="smart-catalog-btn"><a href="/catalog/">Каталог</a></li>
+      <li><a href="/about/">Обо мне</a></li>
+      <li><a href="/delivery/">Доставка</a></li>
+      <li><a href="/payment/">Способы оплаты</a></li>
+    </ul>
+  </div>
+
+  <div class="col-12 disable submenu">
+    <div class="row justify-content-center">
+
+      <div class="col-3">
+        <ul>
+          <li class="submenu-title">Гитарное усиление</li>
+          <li class="submenu-item"><a href="/catalog/combo-amps/?page=1">Комбики</a></li>
+          <li class="submenu-item"><a href="#">Усилители</a></li>
+          <li class="submenu-item"><a href="#">Кабинеты</a></li>
+        </ul>
+      </div>
+
+      <div class="col-3">
+        <ul>
+          <li class="submenu-title">Педали эффектов</li>
+          <li class="submenu-item"><a href="#">Перегрузы</a></li>
+          <li class="submenu-item"><a href="#">Модуляция</a></li>
+          <li class="submenu-item"><a href="#">Блоки питания</a></li>
+        </ul>
+      </div>
+
+      <div class="col-3">
+        <ul>
+          <li class="submenu-title">Корпуса</li>
+          <li class="submenu-item"><a href="#">Индивидуальные</a></li>
+          <li class="submenu-item"><a href="#">Рековые</a></li>
+        </ul>
+      </div>
+
+      <div class="col-3">
+        <ul>
+          <li class="submenu-title">Прочее</li>
+          <li class="submenu-item"><a href="#">Гитарные кейсы</a></li>
+          <li class="submenu-item"><a href="#">Педалборды</a></li>
+          <li class="submenu-item"><a href="#">Коммутация</a></li>
+          <li class="submenu-item"><a href="#">Стойки</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</nav>

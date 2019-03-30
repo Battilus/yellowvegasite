@@ -1,3 +1,7 @@
 from django.contrib import admin
+from catalog.models import ComboAmp
 
-# Register your models here.
+
+@admin.register(ComboAmp)
+class CatalogAdmin(admin.ModelAdmin):
+    pass
